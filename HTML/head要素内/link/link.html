@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- 固定スタイルシート -->
+    <link rel="stylesheet" type="text/css" href="style_normal.css" title="通常">  <!-- デフォルトスタイルシート(relがstylesheetのものはデフォルトで読み込まれる) -->
+    <link rel="stylesheet alternate" type="text/css" href="style_choise.css" title="選択">  <!-- 代替スタイルシート(relがstylesheet alternateのもの)。ブラウザでスタイルシートを選択できる ※chromeではダメ -->
+    <link rel="stylesheet" type="text/css" href="style.css" media="print"> <!-- 印刷用の設定(他にもプロジェクター用などある) -->
+    <!-- ファビコンの設定 -->
+    <link rel="icon" href="/Users/natsumekatsunori/Pictures/ブログ＆HP作成用/アイコン/ノートのアイコン素材4.png">
+    <!-- ウェブクリップの設定(ホームに追加時の画像設定) -->
+    <link rel="apple-touch-icon" href="/Users/natsumekatsunori/Pictures/ブログ＆HP作成用/アイコン/ノートのアイコン素材4.png">
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/Users/natsumekatsunori/Pictures/ブログ＆HP作成用/アイコン/ノートのアイコン素材4.png"> <!-- アイコンの光沢消し(iOSのみ) -->
+    <!-- 正規ページのURLを設定。クローラーが別ページとみなさないようにする。(同じサイトでも複数のURLになっていたり、urlパラメータの有無によって別ページとしてみなされてしまう) -->
+    <link rel="canonical" href="/Users/natsumekatsunori/Documents/プログラミング学習用/HTML/link/link.html">
+    <!-- RSS(フィード)ページを示す -->
+    <link rel="alternate" type="application/rss+xml" title="フィード" href="フィードページのURL" />
+    <!-- 前後のページ -->
+    <link rel="prev" href="前のページのURL">
+    <link rel="next" href="次のページのURL">
+    
+    <!-- (参考)最近はレスポンシブデザインなのでこういう記述は不要 -->
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="モバイルページのURL" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen and (min-width:1024px)"> <!-- mediaクエリできる。この場合はスクリーン横幅が1024px以上。 -->
+    <link rel="stylesheet" type="text/css" href="style.css" media="(min-width:768px) and (max-width:1023px)"> <!-- スクリーン横幅が768px以上1023以下。 -->
+    
+    <!-- 多言語対応のページの場合 -->
+    <link rel="alternate" hreflang="外国語ページのURL" />
+</head>
+<body>
+    <p>test</p>
+</body>
+</html>

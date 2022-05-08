@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- ページ説明文 -->
+    <meta name=”description” content=”ページ説明文。文章を記入するところ。ページ内容を端的にまとめた内容に。スマートフォンでは120文字前後、PCでは140文字前後で対策キーワードを含む内容にする。”/>
+    <!-- キーワードはあまり重要じゃないらしい -->
+    <meta name=”keywords” content=”キーワードA,キーワードB,キーワードC” />
+    <title>プロフィールページ</title>
+    <!-- styleシートの読み出し -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="mouseover.js"></script>
+    <!-- <base href="http://基準となるURL" target="_blank"> -->
+  </head>
+  <!-- background:背景画像 bgproperties:fixedで背景固定、scrollで固定しない-->
+  <!-- bgcolor:背景色 text:文字色 link:リンクの色(未選択) vlink:リンクの色(訪問後) alink:リンクの色(カーソル合わせ) scroll:スクロールバーの表示 -->
+  <!-- backgroundとalinkとvlinkはうまく動作しない？-->
+  <body background="background_stripe1.png" bgproperties="fixed" bgcolor="#ffefff" text="blue" link="red" vlink="#800080" alink="#ff0000" scroll="yes">
+    <article>
+      <header>
+        <h1 align="center">ぱんだのプロフィールページ</h1>
+        <div class="proflink">
+          <a href="#goto01" target="_blank">プロフィール</a>
+          <a href="#goto02" target="_blank">ぱんだの一言</a>
+          <a href="frame.html#panda">ぱんだのテストページ</a>
+        </div>
+      </header>
+
+    <main>
+    <div id="area1" onmouseover="mouseover();" onmouseout="mouseout();"/>
+      マウスを当てると文字が変わるよ
+    </div>
+    <img id="img1" src="熱中症.jpg" onmouseover="mouseOn();" onmouseout="mouseOff();">
+    <div>
+      <p id="mousepanda1">pan1</p>
+      <p id="mousepanda2">pan2</p>
+      <iframe id="panframe1" src="test1.html" width="300px" height="100px"></iframe>
+    </div>
+      <!-- table:表の大枠 -->
+      <!-- frame:外枠の表示 rules:内罫線 -->
+      <!-- cellspacing:セル間の感覚 cellpadding:セルの中身のスペース summary:要素プロパティで表示される -->
+      <table id="goto01" frame="void" cellspacing="5" cellpadding="10" summary="ぱんだの紹介">
+        <!-- tbody:グループ化 -->
+        <tbody>
+          <!-- tr:表の行 th:セルの見出し td:データセル -->
+          <tr>
+            <th>氏名</th>
+            <td>熱中症ぱんだ</td>
+          </tr>
+          <tr>
+            <th>生年月日</th>
+            <td>1989年1月1日</td>
+          </tr>
+          <tr>
+            <th>出身地</th>
+            <td>上野動物園</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th>ぐるーぷ</th>
+            <td>ぐるぐる</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prof">
+        <p id="goto02">
+          <strong>ぱんだ</strong>の一言。<br>
+          日本の夏は暑い。<em>毛皮脱ぎたい。</em>
+        </p>
+      </div>
+
+      <div class="list">
+        <p>今日のぱんだのごはん</p>
+        <!-- ulは記号のリスト、olは番号リスト -->
+        <!-- ul要素のtypeには、disc(黒丸),circle(白丸),squareといった種類がある-->
+        <!-- ol要素のtypeには、1,A,a,I,iがある -->
+        <ul type="circle">
+          <li>かきごおり
+            <!-- liの中にol要素やul要素を入れると子要素を作ることができる -->
+            <ol type="I">
+              <li>いちご</li>
+              <li>レモン</li>
+              <li>メロン</li>
+              <li>ブルーハワイ</li>
+            </ol>
+          </li>
+          <li>アイス</li>
+          <li>スポドリ
+            <ul type="square">
+              <li>ポカリ</li>
+              <li>アクエリ</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!--  -->
+      <a href="test1.html" target="inframe01">test1をインラインフレームに表示</a><br>
+      <a href="test2.html" target="inframe01">test2をインラインフレームに表示</a><br>
+      <a href="test1.html" target="_blank">test1を新規ウィンドウに表示</a><br>
+      <!-- iframe:ページ内にフレームを作る frameborder:0で枠なし、1で枠あり -->
+      <!-- scrolling:0でスクロールなし、1であり -->
+      <!-- marginwidth:横のマージン marginheight:縦のマージン -->
+      <iframe src="test1.html" name="inframe01" width="50%" height="200px" frameborder="0">表示されない場合の文字</iframe>
+    </main>
+
+    </article>
+    <aside>
+      <img class="icon" src="魚.png" alt="魚アイコン">
+      <img class="icon" src="クラーケン.png" alt="魚アイコン">
+      <img class="icon" src="鮭.png" alt="魚アイコン">
+    </aside>
+    <footer>
+      <p>お問い合わせ</p>
+
+      <form method="post" action="ex.cgi">
+        <!-- type:formの形式 value:初期値 size:入力欄の幅 maxlength:最大文字数-->
+        <p>ID：<input type="text" name="input01" value="IDを入力" size="20" maxlength="10"></p>
+        <p>PW：<input type="password" name="input02" size="20" maxlength="10"></p>
+        <p>問い合わせ内容</p>
+        <input type="password" name="input02" size="20" maxlength="10">
+        <p>メールアドレス：<input type="text" name="email"></p>
+        <p><input type="submit" value="送信する"></p>
+      </form>
+
+      <!-- #64;は「@」になる -->
+      <p><a href="mailto:alphax72&#64;gmail.com">alphax72&#64;gmail.com</a></p>
+    </footer>
+  </body>
+</html>

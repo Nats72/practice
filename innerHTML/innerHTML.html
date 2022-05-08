@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>HTMLの練習</title>
+  <script type="text/javascript" src="innerChange.js"></script>
+</head>
+<body>
+<div id="buttonspace">
+  <div id="changebutton">
+    <input type="button" value="よくある間違い" onclick="change_error()">
+    <input type="button" value="h1" onclick="change_h1()">
+    <input type="button" value="h2" onclick="change_h2()">
+    <input type="button" value="h3" onclick="change_h3()">
+    <input type="button" value="h4" onclick="change_h4()">
+  </div>
+  <div id="addbutton">
+    <input type="button" value="beforebeginで追加する" onclick="ins_beforebegin()">
+    <input type="button" value="afterbeginで追加する" onclick="ins_afterbegin()">
+    <input type="button" value="beforeendで追加する" onclick="ins_beforeend()">
+    <input type="button" value="afterendで追加する" onclick="ins_afterend()">
+  </div>
+</div>
+<div id="outside_div">
+  <div id="change_div">
+  </div>
+</div>
+</body>
+</html>

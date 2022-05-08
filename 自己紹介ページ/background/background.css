@@ -1,0 +1,17 @@
+/*https://www.webcreatorbox.com/tech/css-gradient*/
+
+body {
+  background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)) fixed, url(魚.png) fixed;
+  background-size: cover;
+}
+
+div {
+  margin: 120px 0;
+  text-align: center;
+}
+p {
+  font-family: Meiryo, "Hiragino Kaku Gothic Pro W3", Courier New, sans-serif;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: #fff;
+}

@@ -1,0 +1,41 @@
+<!-- https://coliss.com/articles/build-websites/operation/css/how-calc-works-by-ire.html
+https://web-designer.cman.jp/javascript_ref/window/size/
+https://www.webcreatorbox.com/tech/css-variables
+https://developer.mozilla.org/ja/docs/Web/CSS/:root
+https://www.javadrive.jp/javascript/event/index1.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --ratio: 1;
+    }
+    div{
+      /* 1600pxのときに48pxであることを基準にウィンドウサイズの可変に応じてサイズを変更する */
+      font-size: calc(48px * var(--ratio));
+    }
+  </style>
+</head>
+
+<body>
+  <div>サイズ変更する文字</div>
+  
+  <script>
+    function css_resize(){
+      var innerWidth = window.innerWidth;
+      if(innerWidth<=1920){
+        document.documentElement.style.setProperty('--ratio', innerWidth/1600);
+      }
+    }
+    window.onload = css_resize;
+    window.onresize = css_resize;
+  </script>
+
+</body>
+
+</html>

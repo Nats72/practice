@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.google.co.jp/">別のURLへのリンク(Google)</a>
+    <a href="#point">同じページ内のid="point"へジャンプ</a>
+    <a href="mailto:alphax72@gmail.com">メーラーを起動</a>
+    <a href="tel:090-0000-0000">電話を起動</a>
+    <p>p要素内の記述も可能。<a href="http://yahoo.co.jp/">別のURLへのリンク(yahoo)</a></p>
+    <p>画像をダウンロードさせる(downloadに記載の名前で、hrefのアドレスのファイルをダウンロードさせる)おそらくhttp通信じゃないとダウンロードされない。<a href="8mater.png" download="はち.png"><img src="8mater.png" alt=""></a></p>
+    <div id="space"></div>
+    <style>#space{margin: 1000px;}</style>
+
+    <p id="point">id="point"</p>
+    <a href="http://www.google.co.jp/" rel="bookmark">ref属性で、リンク先の役割を記述することも可能。(あまり使わないかも？)</a>
+    <a href="#">同ページのトップにジャンプ</a>
+</body>
+</html>

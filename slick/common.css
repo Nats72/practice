@@ -1,0 +1,16 @@
+/* 最大・最小の高さを揃える */
+.slick-slide img{
+  height: 30vw;
+  max-height: 400px;
+  min-height: 350px;
+}
+
+/* 画像が中央に来ると大きくなる処理 */
+.slick-slide {
+  transition: 0.1s ease-in-out;
+  transform: scale(0.7);
+}
+.is--active {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.0);
+}

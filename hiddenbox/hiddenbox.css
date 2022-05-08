@@ -1,0 +1,59 @@
+/*全体*/
+.hidden_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 15px;    /* 枠と中身の距離 */
+    font-weight: bold;    /* 太字にする */
+    border-radius: 5px;
+    background: #0fefef;
+    border: solid 2px black;    /* 枠の太さ */
+    cursor :pointer;    /* カーソルをポインターにする */
+    transition: .1s;
+}
+
+/*アイコンを表示*/
+.hidden_box label:before {
+    display: inline-block;
+    content: '\f078';
+    font-family: 'FontAwesome';
+    padding-right: 5px;
+    transition: 0.2s;
+}
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background: silver;
+}
+
+/*アイコンを切り替え*/
+.hidden_box input:checked ~ label:before {
+     content: '\f00d';
+     -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+     color: #668ad8;
+}
+
+/*input要素(チェックボックス)は見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;    /*領域からはみ出たところは非表示にする*/
+    opacity: 0;    /*要素を透明にする 透明度は0.0〜1.0s*/
+    transition: 1.5s;    /*状態変化するまでの秒数*/
+}
+
+/*inputがチェック状態になったときのhidden_show*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;    /*上からにゅるっと表示させるためにpaddingを10pxにする*/
+    height: auto;    /*高さをautoにすることで画像サイズに合わせる*/
+    opacity: 1;
+}

@@ -1,0 +1,78 @@
+
+/* 複数要素に適用させるにはカンマで区切る */
+/* すべての要素に適用させるには *{ 〜 } */
+/* ID要素は、#ID名 クラス要素は、.クラス名 */
+
+h1{
+  background-color: #404090;  /* 背景の色 */
+  color: #00ffff;    /* 文字の色 */
+  margin: 10px;  /* 要素の周りの空間(上下左右) */
+  border: 10px solid;  /* 枠線(上下左右) */
+  border-radius: 5px;  /* 枠線の丸み */
+  /*border-color: #009999;   枠線の色 */
+  border-top-color: #007777;
+  border-left-color: #007777;
+  border-right-color: #009999;
+  border-bottom-color: #009999;
+  padding: 20px; /* 内容の周りの空間(上下左右) */
+}
+
+/* a:linkで、まだ見てないリンクのスタイル */
+a:link{
+  color: #0000ff;
+  background-color: #ffffff;
+}
+/* a:visitedで、すでに見たリンクのスタイル */
+a:visited{
+  color: #000088;
+  background-color: #ffffff;
+}
+/* a:hoverで、カーソルをあわせたときのスタイル */
+a:hover{
+  color: #ff3300;
+  background-color: #ffffff;
+}
+/* a:activeで、マウスをクリックしたときのスタイル */
+a:active{
+  color: #ff0000;
+  background-color: #ffffff;
+}
+img{
+  width: 80%;
+}
+
+table{
+  width: 80%;
+  border: 2px solid;
+}
+
+th{
+  width: 30%;
+  text-align: left;
+  padding-right: 10px;
+  background-color: #ffff55;
+  color: #000000;
+  border: 1px solid;
+}
+
+td{
+  width: 70%;
+  padding-left: 10px;
+  background-color: #ffffff;
+  border: 1px solid;
+}
+
+.prof{
+  width: 70%;
+  border: 5px double #ff0000;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin:20px 10px;   /* 上下のマージンを20px、左右のマージンを10px */
+}
+
+.icon{
+  width:100px;
+  height:100px;
+  border:3px solid #0000ff;
+}

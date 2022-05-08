@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :rootに宣言するとグローバル変数のように使用できる */
+        :root{
+            --blue: blue;
+            --val: 16px;
+        }
+        .color_blue{
+            color: var(--blue);
+        }
+        .back_blue{
+            background-color: var(--blue);
+        }
+        .calc_1{
+            font-size: var(--val);
+        }
+        .calc_2{
+            font-size: calc(var(--val) * 2);
+        }
+    </style>
+</head>
+<body>
+    <p class="color_blue">ABC</p>
+    <p class="back_blue">DEF</p>
+    <p class="calc_1">1</p>
+    <p class="calc_2">2</p>
+</body>
+</html>

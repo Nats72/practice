@@ -1,0 +1,154 @@
+●変数の宣言
+varは再宣言可能、再代入可能
+letは再宣言不可、再代入可能
+constは再宣言不可、再代入不可
+※古いブラウザだとvarとconstは対応してないかも
+https://qiita.com/terrym/items/d1bc81256d44723a2a83
+
+●入力プロンプト
+windows.prompt('入力してください');
+
+●コンソール出力
+console.log('出力');
+
+●出力アラート
+alert('出力');
+
+●while文
+条件にを満たすまでループする
+white(a>1){
+    内容
+}
+
+●for文
+条件がtrueの間繰り返す
+for(i=1;i<10;i++){
+    内容
+}
+
+●break文
+ループを終了する
+break;
+
+●contnue文
+ループを1回スキップする
+continue;
+
+●array[]
+配列に文字を格納することができる
+let array[1] = 'aaa' //入力方法
+array.length //配列の長さ
+
+●for...of文
+拡張for文
+以下の例だと、配列の内容を、ループごとにひとつひとつitemに格納してくれる
+for(let item of array){
+    console.log(item);
+}
+
+●連想配列
+
+●関数の作成
+function sample(){
+    内容
+}
+
+●関数の呼び出し
+sample();
+
+●関数に引数を渡して実行
+function add(num1,num2){
+    let ans = num1 + num2;
+}
+add(1,2);
+
+●関数実行後の返り値の取得
+function add(num1,num2){
+    let ans = num1 + num2;
+    return(ans);
+}
+num = add(1,2);
+
+●Stringオブジェクト
+文字列オブジェクト
+let str = new String('ABC');
+
+●toUpperCase()メソッド
+すべて大文字表示
+let str = new String('aBcDe');
+console.log(str.toUpperCase());
+
+●toLowerCase()メソッド
+すべて小文字表示
+let str = new String('aBcDe');
+console.log(str.toLowerCase());
+
+●暗黙的なオブジェクト
+数値や文字列はそのままオブジェクトとして扱える。
+つまり、
+let str = 'ABC';
+と、
+let str = new String('ABC');
+は同じ宣言をしているということ
+
+●Stringオブジェクトのプロパティ・メソッド
+let str = '私の好きな果物はりんごです。';
+console.log(str.length);    //文字数を返す→14
+console.log(str.indexOf('りんご'));    //1文字目を0として数えて何番目にあるかを返す→8
+console.log(str.indexOf('りんご',6));    //6文字目から数え始める→8、6文字目より前にある語句だと-1を返す
+console.log(str.charAt(2));    //1文字目を0として数えて指定文字目の文字を抜き出す→好
+console.log(str.substring(5,8));    //1文字目を0として数えて5番目の文字から8番目の手前までの文字を抜き出す→果物は
+console.log(str.replace('りんご','もも'));    //文字を変えて返す→私の好きな果物はももです。
+
+●Numberオブジェクト
+
+●Mathオブジェクト
+console.log(Math.PI);    //円周率
+console.log(Math.SQRT2);    //√2
+
+console.log(Math.abs(-10));    //絶対値→-10
+console.log(Math.pow(2,3));    //べき乗(2^3)→8
+
+console.log(Math.max(10,72,5));    //最大値→72
+console.log(Math.min(10,72,5));    //最小値→5
+
+Math.ceil(123.45)    //切り上げ
+Math.floor(123.45)    //切り下げ
+Math.round(123.45)    //四捨五入
+
+Math.random()    //0〜1未満の乱数
+
+●Arrayオブジェクト
+array.length    //配列の長さ
+array.indexOf('ABC')    //配列の中のどこにあるか
+array.join('-')    //配列内の文字をくっつける
+array.concat(array2)    //配列同士をくっつける
+array.slice(1,3)    //2つ目から3番目の配列を表示
+
+●Arrayオブジェクトの破壊的メソッド
+x = array.pop();    //arrayという配列の中の一番最後の要素を取り出す
+array.push('DEF');    //arrayという配列の一番最後に要素を追加する
+
+●Dateオブジェクト
+
+●関数もオブジェクト
+let getSquare = new Function('a','b','return a * b;');
+console.log(getSquare(3,7));    //21
+
+//newを略すとこうなる
+let getSquare = function(a,b){
+    return a * b;
+}
+console.log(getSquare(3,7));
+
+●自作オブジェクト
+let Person = new Object();
+
+Person.name = '夏目';
+Person.hello = function(){
+    console.log('こんにちは');
+}
+console.log(Person.name);    //プロパティへのアクセス方法
+console.log(Person['name']);    //こういうアクセス方法もある
+Person.hello();
+

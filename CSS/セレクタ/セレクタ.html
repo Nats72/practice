@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: block;
+        }
+        .change1,.change2{    /* カンマ区切りでOR条件で複数セレクタを指定 */
+            background-color: blue;
+        }
+        .container .change1{    /* 空白区切りでcontainerクラスを親要素にもつ、change1クラスを指定 */
+            color:white;
+        }
+        p.change2{    /* 区切りなしでAND条件で指定(p要素かつchange2クラス) */
+            color:pink;
+        }
+        a[href][target="_blank"]{    /* 複数の属性セレクタで絞り込む(href属性とtarget="_blank") */
+            background-color: skyblue;
+        }
+        a[href^="#"]{    /* #で始まるもの */
+            background-color: pink;
+        }
+        a[href$=".com"]{    /* .comで終わるもの */
+            font-weight: bold;
+        }
+        a[href*="8m"]{    /* 8mが含まれるもの */
+            background-color: greenyellow;
+        }
+        table{
+            border: 1px solid black;
+        }
+        table.tbl tr:nth-child(2n+1){    /* テーブル行の奇数を指定(特にtableの子として宣言しなくてもよい) */
+            background-color: lightcyan;
+        }
+        table.tbl tr:nth-child(2n+0){    /* テーブル行の偶数を指定 */
+            background-color: lightyellow;
+        }
+        table.tbl tr:nth-of-type(4){    /* 指定した要素が何番目なのか(指定要素以外は数えない、孫要素も数えない)、この場合だと4番目のtr */
+            background-color:magenta;
+        }
+        table.tbl tr:first-child{    /* 1番目の子要素 */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="change1">container>change1</p>
+        <p class="change2">container>change2</p>
+    </div>
+    <p class="change1">change1</p>
+    <h1 class="change2">change2</h1>
+    <a href="https://8mater.com" target="_blank">blank</a>
+    <a href="https://8mater.com" target="_self">self</a>
+    <a href="#">トップへ戻る</a>
+    <table class="tbl">
+        <tr><td>みかん</td><td>10箱</td></tr>
+        <tr><td>りんご</td><td>20盛</td></tr>
+        <tr><td>バナナ</td><td>50房</td></tr>
+        <tr><td>メロン</td><td>8個</td></tr>
+    </table>
+
+
+    <article>
+        <h1>article内のh1</h1>
+        <p>article内のp要素1つ目</p>
+        <p>article内のp要素2つ目</p>
+    </article>
+    <style>
+        article > p{    /* 子要素を指定する(article内のp) */
+            color:midnightblue;
+        }
+        h1 + p{    /* 直後の兄弟要素を指定する(h1に直後にあるp) */
+            background-color: orange;
+        }
+    </style>
+
+    <p class="bold">BOLD</p>
+    <style>
+        p[class~="bold"]{    /* 特定の属性値を含む要素を指定する */
+            font-weight: bold;
+        }
+    </style>
+
+    <p class="info">info</p>
+    <p class="news-info">news-info</p>
+    <p class="infomation">infomation</p>
+    <style>
+        p[class^="info"]{    /* p要素のうち、class属性の名前がinfoから始まるもの */
+            color:orangered;
+        }
+        p[class$="info"]{    /* p要素のうち、class属性の名前がinfoで終わるもの */
+            color:blueviolet;
+        }
+        p[class*="info"]{    /* p要素のうち、class属性の名前にinfoを含むもの */
+            background-color: chartreuse;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: block;
+        }
+        a:link{    /* 未訪問 */
+            color: blue;
+        }
+        a:visited{    /* 訪問済 */
+            color:purple;
+        }
+        a:hover{    /* カーソルを合わせたとき */
+            color:green;
+        }
+        a:active{    /* リンクをクリック(押し込み)したとき*/
+            color:aqua;
+        }
+        .fc p:first-child{
+            background-color: pink;
+        }
+        .fline p:first-line{
+            text-decoration:underline;
+        }
+        .fletter p:first-letter{
+            background-color: blue;
+            color:white;
+        }
+        input:focus{    /* inputボックスが入力モードになったときにbackground-colorが変化 */
+            background-color: lawngreen;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="https://8mater.com/">8mater</a>
+        </div>
+        <div class="fc">
+            <p>1番目の要素はfirst-childが適用される</p>
+            <p>2番目の要素はfirst-childが適用されない</p>            
+            <div>
+                <p>子要素に内包されていれば孫要素の1番目の要素はfirst-childが適用される(親要素に対して1番目のpタグが対象)</p>
+                <p>2番目の要素はfirst-childが適用されない</p>
+            </div>
+        </div>
+        <div class="fline">
+            <p>1行目はfirst-lineが適用される<br>2行目はfirst-lineが適用されない</p>            
+        </div>
+        <div class="fletter">
+            <p>1文字目だけfirst-letterが適用される</p>            
+        </div>
+        <div>
+            <p>クリックされた状態(focus状態で、background-colorが変化)</p>
+            <input type="text">
+        </div>
+    </div>
+</body>
+</html>

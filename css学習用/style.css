@@ -1,0 +1,24 @@
+header.site-header{
+  /*position:fixed;*/
+  width:100%;
+  height:50px;
+  background-color:#FFFFFF;
+  display: block; /* 親要素の幅に合わせる */
+  display: flex;  /* 直下の要素を並列にする */
+  /* 直下の要素を中央寄せする */
+  -webkit-justify-content: center; /* 横方向の中央寄せ */
+  justify-content: center;
+  -webkit-align-items: center; /* 縦方向の中央寄せ */
+  align-items: center;
+}
+
+nav.menu{
+  display: flex;
+}
+
+.content{
+
+  width:100%;
+  height:1000px;
+  background-color:#00FF00;
+}

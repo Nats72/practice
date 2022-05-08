@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            background-color: midnightblue;
+        }
+        .learn-more-circle{
+            position: absolute;
+            height:50px;
+            width:50px;
+            border-radius:25px;
+            background:rgba(255,255,255,0.6);
+        }
+        .learn-more{
+            position: absolute;
+            height: 50px;
+            margin: 0;
+            line-height:50px;
+            text-align:center;
+            font-size: 16px;
+            color: white;
+            padding: 0 25px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="learn-more-circle"></div>
+        <p class="learn-more">Learn more +</p>
+    </div>
+    <script>
+        var learn_more_action = 0;
+        //マウスを乗せたら発動
+        $('.learn-more').hover(function() {
+            if(learn_more_action == 0){
+                learn_more_action = 1;
+                var learnmore_size = $(this).innerWidth();
+                var learnmore_right = $(this).width();
+                $('.learn-more-circle').animate({
+                    'width': learnmore_size
+                },500);
+                $('.learn-more-circle').animate({
+                    'width': '50px',
+                    'left': learnmore_right
+                },300);
+            }
+        });
+        $('.learn-more').mouseleave(function() {
+            var learnmore_left = $(this).offset().left;
+            $('.learn-more-circle').animate({
+                'width': '50px',
+                'left': learnmore_left
+            },0);
+            learn_more_action = 0;
+        });
+    </script>
+</body>
+</html>

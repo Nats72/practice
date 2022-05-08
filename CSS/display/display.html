@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>HTMLの練習</title>
+  <script type="text/javascript" src="sample.js"></script>
+  <link rel="stylesheet" type="text/css" href="display.css">
+  <!-- 古いブラウザでもHTML5に対応させる -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div id="nav">
+  　<ul>
+　　   　<li>HOME</li>
+　   　　<li>HTML</li>
+　   　　<li>CSS</li>
+  　</ul>
+</div>
+
+<hr>
+
+<div class="oya_block">
+  <div class="display_block">
+    display:blockは縦に並ぶ
+  </div>
+  <div class="display_block">
+    前後には改行が入る
+  </div>
+  <div class="display_block">
+    縦横(width,height)のサイズ指定可能
+  </div>
+  <div class="display_block">
+    外余白(margin)、内余白(padding)の指定可能
+  </div>
+  <div class="display_block">
+    text-aligne(中央寄せなど)は指定できない
+  </div>
+</div>
+
+<hr>
+
+<div class="oya_inline">
+  <div class="display_inline">
+    display:inlineは横に並ぶ
+  </div>
+  <div class="display_inline">
+    幅と高さの指定不可、中身に依存
+  </div>
+  <div class="display_inline">
+    余白の指定をすると形が崩れる
+  </div>
+  <div class="display_inline">
+    text-aligne(中央寄せなど)は親要素に対して指定可能
+  </div>
+</div>
+
+<hr>
+
+<div class="oya_inlineblock">
+  <div class=display_inlineblock"">
+    display:inline-blockも横に並ぶ
+  </div>
+  <div class=display_inlineblock"">
+    縦横、余白の設定可能
+  </div>
+  <div class=display_inlineblock"">
+    text-aligne(横の中央寄せなど)やvertical-aligne(縦の中央寄せなど)の指定可能
+  </div>
+</div>
+
+<hr>
+
+<div class="display_none">
+  ここは非表示になります
+</div>
+<div class="display_none">
+  非表示になってるだけなので、WEBブラウザとしてはちゃんと読み込んでいる
+</div>
+
+</body>
+</html>

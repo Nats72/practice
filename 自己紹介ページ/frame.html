@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>frametest</title>
+</head>
+
+<!-- cols:横の分割 rows:縦の分割 pxもしくは%で分割可能、*で残り全部って意味になる -->
+<!-- borderで境界線の太さ bordercolor:境界線の色 -->
+<frameset cols="200px,200px,*" rows="70%,*" border="1px" bordercolor="red">
+  <frame src="test0.html" name="panda0" title="ぱんだ0">
+
+  <!-- framesetの中にframesetを入れることもできる -->
+  <!-- frameborder:1でframeの境界線を表示、0で境界線を消す -->
+  <frameset rows="40%,*" frameborder="0">
+    <frame src="test1.html" name="panda1" title="ぱんだ1">
+    <frame src="test2.html" name="panda2" title="ぱんだ2">
+  </frameset>
+  <!-- noresizeでリサイズ無効化 -->
+  <!-- scrolling:yesでスクロールバー表示、noでスクロールバー表示しない -->
+  <frameset rows="50%,*">
+    <frame src="test3.html" name="panda3" title="ぱんだ3" scrolling="no" noresize>
+    <frame src="test4.html" name="panda4" title="ぱんだ4">
+  </frameset>
+  <frame src="test4.html" name="panda4" title="ぱんだ4">
+  <frame src="test4.html" name="panda4" title="ぱんだ4" marginwidth="30px" marginheight="30px">
+
+  <!-- frameに対応していないブラウザで開いたときにbodyの内容が表示される -->
+  <noframes>
+    <body>
+      <p>フレームの代替内容</p>
+    </body>
+  </noframes>
+</frameset>
+
+</html>

@@ -1,0 +1,53 @@
+.container {
+  width: 1000px;
+  display: -webkit-flex;
+  display: flex; /* Flexboxで囲むことで高さを同じにする */
+}
+.main {
+  display: block;
+  width: 300px;
+  height: 5000px;
+  margin-right: 20px;
+  background-color: red;
+}
+.sidebar {
+  width: 320px;
+  background-color: blue;
+}
+.sidebar_item {
+  height:300px;
+  margin-bottom: 20px;
+  background-color: yellow;
+}
+.sidebar_sticky_1 {
+  position: sticky;
+  height:300px;
+  margin-bottom: 0;
+  top: 10px;
+  z-index: 1;
+  background-color: #00FF00;
+}
+.sidebar_sticky_2 {
+  position: sticky;
+  height:300px;
+  margin-bottom: 0;
+  top: 10px;
+  z-index: 1;
+  background-color: #00CC00;
+}
+.sidebar_sticky_3 {
+  position: sticky;
+  height:300px;
+  margin-bottom: 0;
+  top: 10px;
+  z-index: 1;
+  background-color: #009900;
+}
+.sidebar_sticky_4 {
+  position: sticky;
+  height:300px;
+  margin-bottom: 0;
+  top: 10px;
+  z-index: 1;
+  background-color: #006600;
+}

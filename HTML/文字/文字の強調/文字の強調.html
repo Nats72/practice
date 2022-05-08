@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        ここは普通の文字。<br>
+        <em>emで囲った場合は斜めになる。em要素は強勢(口に出したときに強調・アクセントをつけて発音する)を示す。</em><br>
+        <i>i要素で囲った場所も斜めになる。i要素の場合は、心の中で思ったことや、専門用語などの、少し異なる箇所であることを示す。</i><br>
+        <strong>strongで囲うと太字になる。strong要素は重要であることを示す。</strong><br>
+        <b>bで囲っても太字になる。しかし、strongと違って重要性はないもの。</b><br>
+        <u>u要素は、スペルミスであることを示す。下線が引かれる。</u><br>
+        <mark>mark要素は、ユーザーが検索した文字をハイライト表示させるとき等に利用される。ユーザーの操作に関連していることを示す。</mark><br>
+        <small>small要素は、細目を示す。免責事項や警告、著作権表示などで使われる。小さめの文字になる。</small><br>
+        <s>s要素は打ち消し線が引かれる。無効になったことを示す。無効であって削除ではない。</s>
+        <cite>cite要素は、文献や作品のタイトルを示す。斜め表示となる。</cite><br>
+        q要素は、<q cite="文字の強調.html">引用元</q>があることを示す。「」に囲われて表示される。<br>
+        <dfn title="こんな風にね。">dfn要素で囲った箇所にマウスカーソルをあわせると定義語を表示する。表示される文字は斜めになる。</dfn><br>
+        <abbr title="略語です。">abbr要素で囲った箇所も、マウスカーソルを合わせると定義語を表示する。abbrは略語の正式名称を示すときに使う。下点線が表示される。</abbr><br>
+        ruby<ruby>要素<rt>ようそ</rt></ruby>は、ルビを<ruby>振<rt>ふ</rt></ruby>ることができる。chromeではrb使えないかも。<br>
+        sub要素は、下付き文字を表示する。下付き文字は、H<sub>2</sub>Oの2のような科学記号の下に下がった文字のことである。<br>
+        sup要素は、上付き文字を表示する。上付き文字は、100m<sup>2</sup>のように利用する。<br>
+        <span style="background-color: orange;">span要素は、囲った箇所をスタイル指定できる。この場合は背景色をオレンジにしている。</span><br>
+        <ins cite="URL" datetime="2020-11-02">ins要素は追加されたことを示す。下線が引かれる。</ins>
+        <del cite="URL" datetime="2020-11-02">del要素は削除されたことを示す。打ち消し線が引かれる。</del><br>
+        <bdo dir="ltr">左から右へ。</bdo>
+        <bdo dir="rtl">右から左へ。</bdo><br>
+        <pre>
+            <code>
+                //code要素はpre要素と一緒に使って、codeで囲った部分はコードであることを示す。
+                var <var>code_true</var> = True;    //var要素はcode要素内での変数を表す。囲った部分は斜めになる。
+                if(<var>code_true</var>){
+                    console.log('This is True Code.');
+                }
+            </code>
+            実行結果:<samp>This is True Code.</samp>
+        </pre>
+        kbd要素は、ユーザがキーボードで打つ内容であることを示す。コピーするときは、<kbd>ESC</kbd>+<kbd>C</kbd>を入力してください。といった感じ。
+    </p>
+</body>
+</html>

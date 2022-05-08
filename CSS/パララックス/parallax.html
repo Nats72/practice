@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パララックスサイト</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 1000vh;
+    }
+
+    .box {
+      height: 40px;
+      width: 40px;
+      position: fixed;
+      top: 10px;
+    }
+
+    #box1 {
+      left: 10px;
+      background: red;
+    }
+
+    #box2 {
+      left: 60px;
+      background: blue;
+    }
+
+    #box3 {
+      left: 110px;
+      background: green;
+    }
+    .one, .two{
+      height: 200px;
+      width: 100vw;
+      background-color: midnightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="one"></div>
+  <div class="two">
+    <div id="box1" class="box"></div>
+    <div id="box2" class="box"></div>
+    <div id="box3" class="box"></div>
+  </div>
+
+  <script>
+    // ウィンドウをスクロールした時に
+    $(window).scroll(function () {
+      parallax();
+    });
+
+    function parallax(){
+      // どれだけy方向に動いたか、画面が上下に移動する度にスクロール位置を取得できる
+      var scroll_top = $(this).scrollTop();
+      var offset_two = $('.two').offset().top;
+      console.log('scroll:' + scroll_top + ' two:' + offset_two + ' box:' + $('#box1').offset().top);
+      // スクロールすると赤い正方形がそれに合わせて下に動いていく
+      $('#box2').css('top', 10 + scroll_top);
+      $('#box3').css('top', 10 + scroll_top);
+      if(scroll_top>=offset_two){
+        $('#box1').css('top', 10 + scroll_top - (scroll_top - offset_two)/2 );
+      }else{
+        $('#box1').css('top', 10);
+      }
+    }
+    parallax();
+  </script>
+</body>
+</html>

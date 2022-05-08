@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: 1px solid #000;
+            background-color: cadetblue;
+        }
+        body{
+            font-size: 2rem;
+            /* width: 800px; */
+            margin: 0 auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template: 
+                "... header ..." 150px
+                "... main ..." 610px
+                "... progress ..." 3px
+                "... news ..." 130px
+                "... vision ..." 300px
+                / auto 1920px auto;
+        }
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        .progress{
+            grid-area: progress;
+        }
+        .news{
+            grid-area: news;
+        }
+        .vision{
+            grid-area: vision;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>main</main>
+    <div class="progress">progress</div>
+    <div class="news">news</div>
+    <div class="vision">vision</div>
+</body>
+</html>

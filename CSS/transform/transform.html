@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rotate{
+            transform: rotate(-22deg);    /* 中心を基準に時計回りに-22度回転 */
+            background-color: violet;
+            width: 200px;
+        }
+        .rotate_x{
+            transform: rotateX(45deg);    /* 横軸を基準に45度回転 */
+            width: 200px;
+        }
+        .rotate_y{
+            transform: rotateY(45deg);    /* 縦軸を基準に180度回転 */
+            width: 200px;
+        }
+        .rotate_z{
+            transform: rotateZ(45deg);    /* 中心を基準に時計回りに45度回転 */
+            width: 200px;
+        }
+        .rotate_xyz{
+            transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);    /* x,y,z軸すべて45度回転 */
+            width: 200px;
+        }
+        .rotate_3d{
+            transform: rotate3d(1,1,1,45deg);    /* x:y:zと角度 */
+            width: 200px;
+        }
+        .t_origin{
+            /*transform-origin: 10% 0%;    /* 左から10%、上から0%の点を基準に回転させる */
+            transform-origin: right bottom;    /* 右下の端を基準に回転させる */
+        }
+        .transition:hover{    /* マウスカーソルをあわせたときに動作する */
+            transform: rotateZ(360deg);    /* 中心を基準に時計回りに360度回転 */
+            transition: 1s;    /* 1秒かけて動作させる */
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="rotate">Rotate</h1>
+    <h2 class="rotate_x">RotateX</h2>
+    <h2 class="rotate_y">RotateY</h2>
+    <h2 class="rotate_z">RotateZ</h2>
+    <h2 class="rotate_xyz">RotateXYZ</h2>
+    <h2 class="rotate_3d">Rotate3d</h2>
+    <h2 class="rotate_z t_origin">RotateZ_origin</h2>
+    <h2 class="transition">RotateZ_transition</h2>
+</body>
+</html>

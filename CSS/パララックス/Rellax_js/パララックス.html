@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.1/rellax.min.js"></script>
+  <style>
+    .rellax1{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .bgimage{
+      width: 100%;
+      height: auto;
+      margin: 0;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <h1 class="rellax1">SONICMOOV</h1>
+    <img class="rellax2 bgimage" src="pict.jpg" alt="">
+    <img class="rellax2 bgimage" data-rellax-speed="-10" src="pict.jpg" alt="">
+  </div>
+  <script>
+      var rellax = new Rellax('.rellax1',{
+        speed: -5,  // スクロールスピード
+        center: false,  // センタリング
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+      });
+      var rellax2 = new Rellax('.rellax2',{
+        speed: -8,  // スクロールスピード
+        center: false,  // センタリング(data-rellax-percentage=”0.5″と同じ役割)
+        wrapper: null,  // 監視領域(デフォルト値 null(=body))
+        round: true,  // ?
+        vertical: true,  // Y軸方向パララックス
+        horizontal: false  //X軸方向パララックス
+      });
+  </script>
+</body>
+</html>

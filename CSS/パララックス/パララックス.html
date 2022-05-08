@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <style>
+    .parallax-bg {
+      background-attachment: fixed;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    /*各背景の画像*/
+    .img-bg-01 {
+      background-image: url('pict.jpg');
+    }
+    .img-bg-02 {
+      background-image: url('pict.jpg');
+    }
+    .img-bg-03 {
+      background-image: url('pict.jpg');
+    }
+    .img-bg-04 {
+      background-image: url('pict.jpg');
+    }
+    .bg-white{
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 300px;
+      margin: 0;
+      background-color: white;
+    }
+    .text{
+      margin: 0;
+      font-size: 152px;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      background-color: white;
+      background-position: right 50px bottom 50px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      -webkit-background-clip: text;
+      background-image: url("pict.jpg");
+    }
+  </style>
+</head>
+<body>
+    <div class="parallax-bg img-bg-01">
+      <div class="bg-white">
+        <p class="text">01</p>
+      </div>
+    </div>
+    <div class="parallax-bg img-bg-02">
+      <div class="bg-white">
+        <p class="text">02</p>
+      </div>
+    </div>
+    <div class="parallax-bg img-bg-03">
+      <div class="bg-white">
+        <p class="text">03</p>
+      </div>
+    </div>
+    <div class="parallax-bg img-bg-04">
+      <div class="bg-white">
+        <p class="text">04</p>
+      </div>
+    </div>
+    <script>
+      $(function() {
+        $(window).scroll(function() {
+            var value = $(this).scrollTop(); //スクロールの値を取得
+            $('#scrollValue').text(top + '/' + value);
+            $('#box1').css('top', top + value / 16);
+            $('#box2').css('top', top + value / 16);
+            $('#box3').css('top', top + value / 6);
+            $('#box4').css('top', top + value / 8);
+        });
+      });
+    </script>
+</body>
+</html>

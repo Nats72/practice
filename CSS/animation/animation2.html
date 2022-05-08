@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes sizeScale{
+            0%{
+                width:0px;
+            }
+            30%{
+                opacity: 0.5;    /* 透明度 */
+            }
+            50%{
+                width: 30%;
+                background-color: blue;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+        .anime{
+            animation-name: sizeScale;    /* @keyframesで動かしたいアニメーション名 */
+            animation-duration: 10s;    /* アニメーション時間の設定 */
+            background-color: black;
+/*            animation-timing-function: ease;
+/*            animation-timing-function: ease-in;    /* 遅い→早い */
+/*            animation-timing-function: ease-out;    /* 早い→遅い */
+/*            animation-timing-function: ease-in-out;    /* 早い→遅い→早い */
+/*            animation-timing-function: linear;    /* 一定速度 */
+/*            animation-timing-function: step-start;    /* 開始時から終了の状態のまま */
+/*            animation-timing-function: step-end;    /* 終了時に最終の状態になる */
+/*            animation-timing-function: steps(4,start);    /* 指定した整数の段階で変化 */
+/*            animation-timing-function: steps(4,end);    /* 指定した整数の段階で変化 */
+            animation-timing-function: cubic-bezier();
+        }
+    </style>
+</head>
+<body>
+    <div class="anime">anime</div>
+</body>
+</html>

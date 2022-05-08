@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: 1px solid #000;
+            background-color: cadetblue;
+        }
+        body{
+            font-size: 2rem;
+            /* width: 800px; */
+            margin: 0 auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template: 
+                "... header header header header header ..." 200px
+                "... ...... ...... ...... ...... ...... ..."
+                "... left   ...... center ...... right  ..." 1fr
+                "... ...... ...... ...... ...... ...... ..."
+                "... footer footer footer footer footer ..." 300px
+                / auto 150px auto minmax(300px,1fr) auto 200px auto;
+        }
+        header{
+            grid-area: header;
+        }
+        .ohkan{
+            grid-area: center;
+            background-color: gray;
+            z-index: 100;
+        }
+        main{
+            grid-area: center;
+        }
+        nav{
+            grid-area: left;
+        }
+        aside{
+            grid-area: right;
+        }
+        footer{
+            grid-area: footer;
+        }
+        @media screen and (max-width: 1000px){
+            body{
+                font-size: 2rem;
+                width: 800px;
+                margin: 0 auto;
+                min-height: 100vh;
+                display: grid;
+                grid-template: 
+                    "header" 150px
+                    "left" 1fr
+                    "center"
+                    "right"
+                    "footer" 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <div class="ohkan"><img src="ohkan.svg" alt=""></div>
+    <nav>left</nav>
+    <main>main</main>
+    <aside>right</aside>
+    <footer>footer</footer>
+</body>
+</html>

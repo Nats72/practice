@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>レイアウト練習</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10"; URL=#">
+    <style>
+      .container{
+        display: grid;
+        grid-template-rows: 5vh 95vh;    /* 縦方向の分割 */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;    /* 横方向の分割 1frと書く場合は残り全部 */
+      }
+      #item-logo{
+        grid-row: 1/2;    /* 縦方向に1~2 */
+        grid-column: 1/2;    /* 横方向に1~2 */
+        display: grid;
+        place-items: center;    /* 縦の中央揃え */
+        width:available;    /* 丁度いいサイズに */
+      }
+      #item-header{
+        grid-row: 1/2;    /* 縦方向に1~2 */
+        grid-column: 2/-1;    /* 横方向に1~奥から1つ目まで */
+        display: grid;
+        place-items: center;
+      }
+      #item-main{
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-bar{
+        display: flex;
+        text-align: center;
+        place-items: center;
+      }
+      
+      .bg-pink{
+        background-color: deeppink;
+        color:white;
+      }
+      .bg-blue{
+        background-color:deepskyblue;
+        color:white;
+      }
+      .bg-green{
+        background-color:forestgreen;
+        color:white;
+      }
+
+
+      #menu{
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border:1px solid black;
+      }
+      #menu li{
+        position: relative;
+        width: 10vw;
+        float: left;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      #menu li a{
+        display: block;
+        margin: 0;
+        padding: 13px 0;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+      }
+      #menu li ul{
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+          padding: 0;
+      }
+      #menu li:last-child ul{
+        left: -100%;
+        width: 100%
+      }
+      #menu li ul li{
+        overflow: hidden;
+        width: 200%;
+        height: 0;
+        color: #fff;
+        -moz-transition: .2s;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        -ms-transition: .2s;
+        transition: .2s;
+      }
+      #menu li ul li a{
+        padding: 13px 15px;
+        background: #1a5293;
+        text-align: left;
+        font-size: 12px;
+        font-weight: normal;
+      }
+      #menu li:hover > a{
+        background: #1a5293;
+        color: #e0dc62;
+      }
+      #menu li:hover ul li{
+        overflow: visible;
+        height: 38px;
+        border-bottom: 1px solid #fff;
+      }
+      #menu li:hover ul li:first-child{
+        border-top: 0;
+      }
+      #menu li:hover ul li:last-child{
+        border-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <div class="bg-blue" id="item-logo"><img src="logo.png"></div>
+        <div class="bg-pink" id="item-header">
+          <ul id="menu">
+            <li><a href="#">Menu</a>
+              <ul>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Menu</a>
+              <ul>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Menu</a>
+              <ul>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Menu</a>
+              <ul>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+                <li><a href="#">Child Menu</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Menu</a></li>
+          </ul>
+        </div>
+        <div class="bg-green" id="item-main">GREEN</div>
+      </div>
+  </body>
+</html>

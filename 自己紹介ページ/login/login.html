@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ログイン</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="sample.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- https://qiita.com/mr0505iwaki/items/cd3c6514825aa2981f73 -->
+  <!-- actionタグに指定したファイルに入力データを飛ばす -->
+  <form action="session1.php" method = "post">
+    <!-- type属性でtextを指定するとテキストボックスになる -->
+    ユーザーネーム<input type ="text" name="username" value = ""><br />
+    パスワード<input type = "text" name="pass" value = ""><br />
+    <!-- type属性をsubmitにすると入力値送信ボタンになる -->
+    <!-- form内のaction要素に指定しているファイルに送る動作をする -->
+    <input type="submit" name ="login" value = "ログイン">
+  </form>
+</body>
+</html>

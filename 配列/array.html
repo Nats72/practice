@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>SearchTEST</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<input id="searchText" type="text" value="" onchange="searchText()">
+<div id="resultArea"></div>
+<script>
+    function searchText(){
+        var key = document.getElementById('searchText');
+        var result = document.getElementById('resultArea');
+        var index = [
+            ['ABC','ABC,abc','abc.jp'],
+            ['CDE','CDE,cde','cde.jp'],
+            ['EFG','EFG,efg','efg.jp'],
+            ['HIJ','HIJ,hij','hij.jp']
+            ];
+        result.innerHTML = "";
+        for(i=0;i<index.length;i++){
+            if(parseInt(index[i][1].indexOf(key))>=0){
+                result.insertAdjacentHTML('beforeend','<p>' + index[i][2] + '</p>');
+            }
+        }
+    }
+</script>
+</body>
+</html>

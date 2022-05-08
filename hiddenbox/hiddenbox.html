@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>HTMLの練習</title>
+  <script type="text/javascript" src="sample.js"></script>
+  <link rel="stylesheet" type="text/css" href="hiddenbox.css">
+  <!-- 古いブラウザでもHTML5に対応させる -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="hidden_box">
+    <!--label内のfor属性(label1)をクリックするのと、inputのid属性(label1)は連動-->
+    <label for="label1">クリックして表示</label>    <!--ラベルをクリックしてもチェックされる-->
+    <input type="checkbox" id="label1"/>    <!--このチェックボックスはCSSで隠す-->
+      <div class="hidden_show">
+        <!--非表示ここから-->
+        	<p><img src="face.jpg"></p>
+        <!--ここまで-->
+      </div>
+  </div>
+</body>
+</html>

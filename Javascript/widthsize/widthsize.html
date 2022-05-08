@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:lightblue;
+        }
+        .target{
+            background-color:black;
+            color:white;
+            text-align: center;
+            margin: 10px;
+            border: 5px solid #333333;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="target" id="cw">cw</div>
+    <div class="target" id="sw">sw</div>
+    <div class="target" id="ow">ow</div>
+    <div class="target" id="wiw"></div>
+    <div class="target" id="wow"></div>
+    <script>
+        window.onresize = function(){
+            resize();
+        }
+        function resize(){
+            var cw = document.querySelector('#cw');
+            cw.innerText = "clientWidth(paddingを含む):" + cw.clientWidth;
+            var sw = document.querySelector('#sw');
+            sw.innerText = "scrollWidth(paddingを含む&画面外の表示も含む):" + cw.scrollWidth;
+            var ow = document.querySelector('#ow');
+            ow.innerText = "offsetWidth(border,padding,スクロールバーを含む):" + cw.offsetWidth;
+            var wiw = document.querySelector('#wiw');
+            wiw.innerText = "innerWidth(スクロールバーを含んだウィンドウの幅):" + window.innerWidth + "<br>";
+            var wow = document.querySelector('#wow');
+            wow.innerText = "outerWidth(サイドバーなどを含んだブラウザ全体の幅):" + window.outerWidth + "<br>";
+        }
+        resize();
+    </script>
+</body>
+</html>
